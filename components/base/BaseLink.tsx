@@ -1,0 +1,25 @@
+import Link from 'next/link'
+import React from 'react'
+import { twMerge } from 'tailwind-merge'
+
+interface BaseLinkProps {
+  children: React.ReactNode
+  className?: string
+  href: string
+  onClick?: () => void
+}
+
+function BaseLink(props: BaseLinkProps) {
+  return (
+    <Link
+      href={props.href}
+      className={twMerge('group relative w-fit font-bold text-accent-light', props.className)}
+      onClick={props.onClick}
+    >
+      {props.children}
+      <div className="absolute bottom-0 left-0 right-0 h-[1px] w-full bg-accent-light transition-all duration-300 group-hover:-bottom-1"></div>
+    </Link>
+  )
+}
+
+export default BaseLink
