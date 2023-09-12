@@ -8,8 +8,9 @@ module.exports = {
     extend: {
       colors: {
         dark: {
-          light: colors.zinc['800'],
-          DEFAULT: colors.zinc['900'],
+          lighter: colors.zinc['800'],
+          light: colors.zinc['900'],
+          DEFAULT: colors.zinc['950'],
         },
         accent: {
           light: colors.emerald['300'],
