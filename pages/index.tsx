@@ -35,7 +35,7 @@ function Home(): React.ReactElement {
       <Container>
         <H1>Bienvenue !</H1>
         <H2 className='mt-6'>Prêt a découvrir de nouvelle disquettes ?</H2>
-        <div className='grid grid-cols-2 gap-8 mt-8'>
+        <div className='grid md:grid-cols-2 gap-8 mt-8'>
           {
             disquettes.map(disquette => (
               <div className='rounded-xl text-white flex flex-col gap-2 bg-dark-light p-4' key={ disquette.uuid }>
@@ -68,7 +68,7 @@ function Home(): React.ReactElement {
                   { disquette.isOc && <span> · <span className='text-accent'>Originale</span></span> }
                 </p>
 
-                <div className='flex gap-2'>
+                <div className='flex gap-2 flex-wrap'>
                   { disquette.tags.map(tag => (
                     <div className='rounded-full bg-white text-dark px-3 py-0.5 text-sm'>{ tag }</div>
                   )) }
